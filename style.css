@@ -577,7 +577,23 @@ a:active {
     aspect-ratio: calc(883/1700);
 
 }
+.responsive_iframe3 {
+    width: 100%;
+    aspect-ratio: calc(480/400);
 
+}
+
+.responsive_iframe4 {
+    width: 100%;
+    aspect-ratio: calc(572/750);
+
+}
+
+.responsive_iframe5 {
+    width: 100%;
+    aspect-ratio: calc(1080/1920);
+
+}
 .wwh_cont {
     display: flex;
     margin: 0;
@@ -772,20 +788,18 @@ a:active {
 }
 
 /* Create four equal columns that sits next to each other */
-.mascolumn {
+.mascolumn {    margin-top: 8px;
     flex: 33%;
     max-width: 33%;
     padding: 0 4px;
 }
 
 .mascolumn img {
-    margin-top: 8px;
     vertical-align: middle;
     width: 100%;
 }
 
 .mascolumn video {
-    margin-top: 8px;
     vertical-align: middle;
     width: 100%;
 }
