@@ -1,4 +1,4 @@
-
+/*modified from https://www.w3schools.com/howto/howto_js_slideshow.asp*/
 let slideIndex = [1,1];
 /* Class the members of each slideshow group with different CSS classes */
 let slideId = ["mySlides1", "mySlides2"]
