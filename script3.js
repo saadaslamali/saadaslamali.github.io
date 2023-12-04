@@ -55,7 +55,7 @@ for (let i = 0; i < links.length; i++) {
         start: "top 1000px",
         end: "center center",
         scrub: false,
-        markers: true,
+        markers: false,
         id: "scrub",
         // snap:".r0",
       }
@@ -72,7 +72,7 @@ for (let i = 0; i < links.length; i++) {
             start: "top 1000px",
             end: "center center",
             scrub: false,
-            markers: true,
+            markers: false,
             id: "scrub",
             // snap:".r0",
           }
