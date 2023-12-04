@@ -20,7 +20,7 @@ body{
     padding: 0;
 
     /* overflow: hidden; */
-    /* overflow-x: hidden; */
+     overflow-x: hidden; 
 
 }
 
@@ -471,6 +471,9 @@ nav {
 
 }
 
+.pagecontainer{
+    opacity:0;
+}
 
 .navinside {
     font-family: "sigurd", sans-serif;
