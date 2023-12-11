@@ -279,42 +279,42 @@ gsap.from(".r2", {
   }
 });
 
-const cursor = document.querySelector(".custom-cursor");
-const links2 = document.querySelectorAll("a");
-let isCursorInited = false;
+// const cursor = document.querySelector(".custom-cursor");
+// const links2 = document.querySelectorAll("a");
+// let isCursorInited = false;
 
-const initCursor = () => {
-  cursor.classList.add("custom-cursor--init");
-  isCursorInited = true;
-};
+// const initCursor = () => {
+//   cursor.classList.add("custom-cursor--init");
+//   isCursorInited = true;
+// };
 
-const destroyCursor = () => {
-  cursor.classList.remove("custom-cursor--init");
-  isCursorInited = false;
-};
+// const destroyCursor = () => {
+//   cursor.classList.remove("custom-cursor--init");
+//   isCursorInited = false;
+// };
 
-links2.forEach((link) => {
-  link.addEventListener("mouseover", () => {
-    cursor.classList.add("custom-cursor--link");
-  });
+// links2.forEach((link) => {
+//   link.addEventListener("mouseover", () => {
+//     cursor.classList.add("custom-cursor--link");
+//   });
 
-  link.addEventListener("mouseout", () => {
-    cursor.classList.remove("custom-cursor--link");
-  });
-});
+//   link.addEventListener("mouseout", () => {
+//     cursor.classList.remove("custom-cursor--link");
+//   });
+// });
 
-document.addEventListener("mousemove", (e) => {
-  const mouseX = e.clientX;
-  const mouseY = e.clientY;
+// document.addEventListener("mousemove", (e) => {
+//   const mouseX = e.clientX;
+//   const mouseY = e.clientY;
 
-  if (!isCursorInited) {
-    initCursor();
-  }
+//   if (!isCursorInited) {
+//     initCursor();
+//   }
 
-  cursor.style = `translate: ${mouseX}px ${mouseY}px`;
-});
+//   cursor.style = `translate: ${mouseX}px ${mouseY}px`;
+// });
 
-document.addEventListener("mouseout", destroyCursor);
+// document.addEventListener("mouseout", destroyCursor);
 
 
 
