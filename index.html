@@ -104,12 +104,11 @@
                                 <!-- All hydra sketches written by me. Using custom wrapper created by https://github.com/jdomizz/hydra-element -->
                                 <hydra-element global="false" id="hydra-bg">
 
-
                                     const { voronoi, noise, shape, o0, mouse, src, width, height } = synth
 
                                     voronoi(99,0.9,9)
                                     .rotate(12,.3)
-                                    .sub(noise(20,0.03).luma(0.6))
+                                    .modulateRotate(noise(3,0.9))
                                     .modulateKaleid(voronoi(0.6,0.9,0.9))
                                     .colorama(0.1)
                                     .repeat(3,3)
@@ -122,7 +121,7 @@
                                     .kaleid(1)
                                     .kaleid(99)
                                     .rotate(3,0.1)
-                                    .sub(src(o0).modulateScale(noise(2,0.2)),0.9)
+                                    .sub(src(o0).modulateScale(noise(2,0.2),-1),0.9)
                                     .scale(()=>mouse.y*-2/height-0.1,()=>mouse.x*-2/width-0.1)
                                     .mult(shape(99,0.01,0.01).scale(()=>mouse.y*-1.7/height-0.1,()=>mouse.x*-1.7/width-0.1).invert())
                                     .brightness(0.2)
