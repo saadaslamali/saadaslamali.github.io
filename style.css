@@ -4,8 +4,6 @@
 
 * {
     box-sizing: border-box;
-    cursor: none;
-
 }
 
 
@@ -16,17 +14,13 @@ html {
     color: #000000;
     margin: 0;
     padding: 0;
-    /* cursor: none; */
 
-    /* overflow: hidden; */
-    /* margin: 0 10%; */
 }
 
 body{
     margin: 0;
     padding: 0;
-/* cursor:none; */
-    /* overflow: hidden; */
+
      overflow-x: hidden; 
 
 }
@@ -61,7 +55,7 @@ body{
     transition: 3s;
     border-bottom: 1px solid #000;
 }
-
+/* 
 .custom-cursor {
     position: fixed;
     opacity: 0;
@@ -87,7 +81,7 @@ body{
   }
   .custom-cursor--init {
     opacity: 1;
-  }
+  } */
 
 
 h1 {
@@ -1049,7 +1043,7 @@ a:active {
 
 .prev,
 .next {
-    cursor: none;
+ 
     position: absolute;
     top: 50%;
     width: auto;
