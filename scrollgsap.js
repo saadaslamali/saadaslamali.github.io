@@ -1,5 +1,5 @@
 "use strict";
-
+// Smooth scroll using https://codepen.io/GreenSock/pen/gOgWELo
 
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
