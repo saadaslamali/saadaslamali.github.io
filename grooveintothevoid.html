@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GROOVE INTO THE VOID</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="animation.css">
+
+
+</head>
+
+<body>
+  <div class="custom-cursor"></div>
+
+
+  <nav class="pagecontainer">
+    <div><a href="index.html">HOME</a></div>
+    <div><a href="wewerehere.html">WE WERE HERE</a></div>
+    <div><a href="somethoughtsihad.html">SOME THOUGHTS I HAD</a></div>
+    <div class="active"><a href="grooveintothevoid.html">GROOVE INTO THE VOID</a></div>
+    <div><a href="kayal.html">KAYAL</a></div>
+  </nav>
+
+  <div id="viewport">
+    <div id="contentcheck">
+      <div class="pagecontainer">
+
+
+        <section class="containerfull">
+          <div class="itemx">
+            <h1>GROOVE INTO THE VOID</h1>
+          </div>
+        </section>
+
+
+        <section class="containerfull2 fdin">
+          <div>
+            <h2>Overview</h2>
+          </div>
+          <div class="gap"></div>
+          <div class="linedivw"></div>
+          <div class="gap"></div>
+
+          <div class="bodytext1">
+            MAY 2023 - PRESENT
+
+          </div>
+          <div class="gap"></div>
+          <div class="gap"></div>
+          <div class="bodytext1">
+           Hydra.js, JavaScript, Adobe After Effects, Adobe Illustrator, Adobe Photoshop
+
+          </div>
+          <div class="gap"></div>
+          <div class="gap"></div>
+
+          <div class="containertext4">
+
+
+            "Groove Into The Void" is a community-based music event and cultural exchange based in Karachi, Pakistan. It seeks to curate audio-visual experiences and foster a subculture for music and art enthusiasts in a city with a scarcity of safe-spaces for artistic expression.
+
+
+          </div>
+          <div class="gap"></div>
+          <div class="gap"></div>
+
+          <div class="containertext4">
+
+            Through our ongoing collaboration, I have played a multifaceted role that extends from live-coded visual performances to the creation of motion graphics, animated posters, and promotional videos that embody the brand's DIY, experimental, and vibrant visual identity</div>
+
+            <div class="gap"></div>
+            <div class="gap"></div>
+  
+            <div class="containertext4">
+                This collaboration has deepened my understanding of how people connect with artwork and the dynamics of community interaction. It's a platform for channeling my passion for creative technology to foster connections grounded in community values, enhancing both artistic expressions and the collective experience.
+
+            </div>
+          </section>
+
+
+
+        <section class="containerfull2 fdin2">
+          <div>
+            <h2>Live-Coded Visuals</h2>
+          </div>
+          <div class="linedivw"></div>
+
+          <div class="gap"></div>
+
+          <div class="containertext4">
+           In May, 2023, I took on the role of live-coding audio-reactive visuals using JavaScript and Hydra.js for the "Controlled Chaos" event. The 8-hour long improvised performance allowed real-time engagement with both the audience and music performers, resulting in an immersive and interactive experience.</div>
+            <div class="gap"></div>
+            
+          <div class="containertext4">
+            Below are some examples of visuals that were created during the event. These visuals, originally audio-reactive, have been converted to a web friendly version that responds to the position of your cursor.</div>
+
+            <div class="gap"></div>
+
+            <div class="gap"></div>
+
+            <section class="container2">
+                <section class="grida1">
+                    <hydra-element global="false" id="hydra-bg">
+
+
+                        const { voronoi, noise, osc, shape, o0, mouse, src, width, height } = synth
+                     
+                        
+                        osc(2,0.5,12)  
+                        .modulateKaleid(osc(5,0.4,()=>mouse.x*5/width),()=>mouse.y*20/height)
+                        .colorama(-0.6)
+                        .luma(0.2)
+                        .rotate(3,0.3)
+                        .saturate(4)
+                        .modulatePixelate(o0,()=>mouse.y*50/height,()=>mouse.x*-50/width+10)
+                        .brightness(-0.1)
+                        .modulateScale(o0,()=>mouse.y*-1/height+0.5)
+                        .contrast(1.7)
+                        .saturate(2)
+                        .blend(o0,0.7)
+                        .scale(()=>mouse.y*0.01/height+1,()=>mouse.x*0.05/width+1)
+                         .out();
+                        
+                        
+                        
+                        
+
+                    </hydra-element>
+                </section>
+
+                <section class="grida2">
+
+                    <hydra-element global="false" id="hydra-bg">
+                      const { voronoi, osc, noise, shape, o0, mouse, src, width, height } = synth
+                    
+                      shape(99,()=>mouse.x*0.25/width+0.1,0.06)
+                      //.modulateRepeat(o0,99)
+                      .rotate(3,-0.8)
+                      .modulatePixelate(noise(4,()=>mouse.y*0.1/height),()=>mouse.y*50/height) 
+                      .mult(osc(12,0.4,0.1).colorama(-99).kaleid(99).modulatePixelate(o0,99,99).modulateScale(o0,()=>mouse.y*-1/height))
+                      .brightness(0.4)
+                      .saturate(7)
+                      .modulateScale(src(o0).modulate(noise(2,0.3)),()=>mouse.x/width)
+                      .contrast(12)
+                      .blend(o0,0.975)
+                      .scale(1.01,1.01)
+                                              .out();     
+                        
+                    </hydra-element>
+                </section>
+                <section class="grida2">
+
+                    <hydra-element global="false" id="hydra-bg">
+                      const { voronoi, osc, noise, shape, o0, mouse, src, width, height } = synth                        
+                        
+                      osc(80, -0.1, 0.3)
+                      .diff(osc(10,0.01, 0.01))
+                      .modulateRepeat(
+                        noise(()=>mouse.y/height, 0.25).modulateScale(
+                          osc(15).rotate(()=>mouse.y*2/height,0.5)
+                        ),
+                        0.6
+                      )
+                      .color(7, 2, 2)
+                      .contrast(1)
+                      .diff(src(o0).modulate(o0, 0.04), 0.8)
+                      .modulateScrollY(o0,()=>mouse.y*10/height,0)
+
+                      .invert()
+                      .modulateScale(osc(2),()=>mouse.x*-2/width+1)
+                      .rotate(0,0.1)
+                      .contrast(1.2)
+                      .saturate(1.1)
+                      .blend(o0,0.8)
+                      .scale(()=>mouse.x*-0.01/width+1,()=>mouse.x*0.01/width+1)
+                      .out() 
+                  
+                        
+                        
+                        
+                    </hydra-element>
+                </section>
+            </section>
+          </section>
+        <div class="gap"></div>
+        <div class="gap"></div>
+        <div>
+          <h2>Motion Graphics & Poster Design </h2>
+        </div>
+        <div class="linedivw"></div>
+
+        <div class="gap"></div>
+
+        <div class="containertext4">
+        A collection of promotional videos and posters that I created for various events organized by Groove Into The Void.</div>      
+         <div class="gap"></div>
+        
+
+        <section class="masrow">
+
+          <section class="mascolumn">
+            <video loop muted controls poster="assets/gitv_a4_poster.png" id="bgvid">
+              <source src="assets/gitv_a4_1.mp4" type="video/mp4">
+            </video>
+            <iframe class="responsive_iframe4" src="https://youtube.com/embed/bgy7WXvnr_A?si=59V2v8p-OlBvy0eA"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen></iframe>
+
+          </section>
+      
+          <section class="mascolumn">
+            <video loop muted controls poster="assets/gitv2_poster.png" id="bgvid">
+              <source src="assets/gitv2.mp4" type="video/mp4">
+            </video>
+
+            <img src="assets/gitvcx.jpg" alt="Groove Into The Void Promo 1">
+
+            <video loop muted controls poster="assets/gitvc1_poster.png" id="bgvid">
+              <source src="assets/gitvc1.mov" type="video/mp4">
+            </video>
+            <img src="assets/gitv_a.png" alt="Groove Into The Void Promo 2">
+          </section>
+      
+          <section class="mascolumn">
+            <video loop muted controls poster="assets/gitv_a3_poster.png" id="bgvid">
+              <source src="assets/gitv_a3.mp4" type="video/mp4">
+            </video>
+            <div>
+            <iframe class="responsive_iframe3" src="https://www.youtube.com/embed/N_E52PFTuZc?si=wNHXpLX3GE-7L2LG"
+              title="YouTube video player" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen></iframe>
+            <video loop muted controls poster="assets/gitvc4_poster.png" id="bgvid">
+              <source src="assets/gitvc4.mp4" type="video/mp4">
+            </video>
+          </section>
+      
+        </section>
+
+
+      <div class="gap"></div>
+      <div class="linedivw"></div>
+
+      <section class="navbottom">
+        <div>
+            <h4>SAADASLAMALI@GMAIL.COM</h4>
+        </div>
+
+        <div>
+            <h4><a href="https://www.instagram.com/saadaslamali/">INSTAGRAM.COM/SAADASLAMALI</a></h4>
+        </div>
+        <div>
+            <h4><a href="#a0">SAADASLAMALI.COM</a>
+                </h4>
+        </div>
+
+    </section>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.0/gsap.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.5/ScrollToPlugin.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js'></script>
+  <script src="https://unpkg.com/hydra-synth"></script>
+  <script src="scrollgsap.js"></script>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/hydra-element"></script>
+  <script src="grooveintothevoid.js"></script>
+</body>
+
+
+</html>
