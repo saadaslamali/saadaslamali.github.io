@@ -314,7 +314,7 @@ document.addEventListener("mousemove", (e) => {
   cursor.style = `translate: ${mouseX}px ${mouseY}px`;
 });
 
-// document.addEventListener("mouseout", destroyCursor);
+document.addEventListener("mouseout", destroyCursor);
 
 
 
