@@ -10,10 +10,9 @@ gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 smoothScroll("#contentcheck"); 
 
 
-
 function smoothScroll(content, viewport, smoothness) {
   content = gsap.utils.toArray(content)[0];
-  smoothness = smoothness || 1.3;
+  smoothness = smoothness || 1;
   gsap.set(viewport || content.parentNode,{overflow: "visible", position: "fixed", height: "100%", width: "80%", top: 0, left: "10%", right: 0, bottom: 0});
   gsap.set(content, {
     overflow: "hidden",
