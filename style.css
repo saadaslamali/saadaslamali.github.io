@@ -4,6 +4,8 @@
 
 * {
     box-sizing: border-box;
+    /* cursor: none; */
+
 }
 
 
@@ -14,13 +16,17 @@ html {
     color: #000000;
     margin: 0;
     padding: 0;
+    /* cursor: none; */
 
+    /* overflow: hidden; */
+    /* margin: 0 10%; */
 }
 
 body{
     margin: 0;
     padding: 0;
-
+/* cursor:none; */
+    /* overflow: hidden; */
      overflow-x: hidden; 
 
 }
@@ -1043,7 +1049,7 @@ a:active {
 
 .prev,
 .next {
- 
+    /* cursor: none; */
     position: absolute;
     top: 50%;
     width: auto;
@@ -1232,13 +1238,13 @@ a:active {
 
     .container1 {
         flex-flow: column;
-        background: #ffffff;
+        background: #F9F6EE;
 
     }
 
     .container2 {
         flex-flow: column-reverse;
-        background: #ffffff;
+        background: #F9F6EE;
 
     }
 
@@ -1265,7 +1271,7 @@ a:active {
     }
 
     .bodytext1 {
-        background-color: #ffffff;
+        background-color: #F9F6EE;
         margin: 0;
         padding: 0;
         height: auto;
@@ -1276,7 +1282,7 @@ a:active {
     }
 
     .bodytext2 {
-        background-color: #ffffff;
+        background-color: #F9F6EE;
         margin: 0;
         padding: 0;
         height: auto;
@@ -1287,7 +1293,7 @@ a:active {
     }
 
     .bodytext3 {
-        background-color: #ffffff;
+        background-color: #F9F6EE;
         margin: 0;
         padding: 0;
         height: auto;
@@ -1427,16 +1433,20 @@ a:active {
         justify-content: space-around;
         flex-direction: row;
     }
+    
+    .headtitle{
+        width:100%;
+    }
 
     .container1 {
         flex-flow: column;
-        background: #ffffff;
+        background: #F9F6EE;
 
     }
 
     .container2 {
         flex-flow: column-reverse;
-        background: #ffffff;
+        background: #F9F6EE;
 
     }
 
@@ -1467,7 +1477,7 @@ a:active {
     }
 
     .bodytext1 {
-        background-color: #ffffff;
+        background-color: #F9F6EE;
         margin: 0;
         padding: 0;
         height: auto;
@@ -1478,7 +1488,7 @@ a:active {
     }
 
     .bodytext2 {
-        background-color: #ffffff;
+        background-color: #F9F6EE;
         margin: 0;
         padding: 0;
         height: auto;
@@ -1489,7 +1499,7 @@ a:active {
     }
 
     .bodytext3 {
-        background-color: #ffffff;
+        background-color: #F9F6EE;
         margin: 0;
         padding: 0;
         height: auto;
@@ -1607,5 +1617,17 @@ a:active {
         align-items: center;
         justify-content: center;
     }
+    .bodytext3{
+   
+            background-color: #F9F6EE;
+            margin: 0;
+            padding: 0;
+            height: auto;
+            width: auto;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20px;
+            color: #000000;
+        
 
+    }
 }
