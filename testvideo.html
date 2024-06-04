@@ -22,7 +22,7 @@
 			init: function () {
 			  this.el.addEventListener('targetFound', event => {
 				console.log("target found");
-				document.querySelector("vidx").play();
+				document.querySelector('video').play();
 			  });
 			  this.el.addEventListener('targetLost', event => {
 				console.log("target found");
@@ -40,20 +40,20 @@
 	    	<!-- <canvas id="canvas-ar" style="display:none;"></canvas> -->
 
   	<!-- MindAR + A-Frame tracking, use ?# to bypass cache during dev -->
-    <a-scene mindar-image="imageTargetSrc: data/targets.mind; filterMinCF:0.005; filterBeta: .1;" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
-		<a-assets>
+    <a-scene mindar-image="imageTargetSrc: data/targets.mind; filterMinCF:0.0005; filterBeta: .1;" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
+		<!-- <a-assets>
   
-			<video id="vidx" loop autoplay>
+			<video id="video" loop autoplay>
 			<source	src="data/targetx.webm" type="video/webm">
 			</video>
-		  </a-assets>
+		  </a-assets> -->
 		  
 		
 		<a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
       <a-entity id="mytarget" mindar-image-target="targetIndex: 0">
       	
       	<!-- p5.js canvas as texture on plane, width + height ratio for F4/Weltformat poster -->
-		  <a-video src="#vidx" position="0 0 0" rotation="0 0 0" width="1.0" height="0.650180941"></a-video>
+		  <a-video id="video" src="data/targetx.webm" loop autoplay position="0 0 0" rotation="0 0 0" width="1.0" height="0.650180941"></a-video>
 		</a-entity>
     </a-scene>
 
